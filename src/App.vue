@@ -1,30 +1,52 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <div>
+
+        <HeaderBlock/>
+
+        <Banner/>
+
+        <Advantages/>
+
+        <Catalog/>
+
+        <Why/>
+
+        <Manufacture/>
+
+        <Form/>
+
+        <Partners/>
+
+        <FeedBack/>
+
+        <Map/>
+
+        <Footer/>
+
+    </div>
 </template>
 
+<script>
+import Banner from '@/components/Banner/banner.vue';
+import HeaderBlock from '@/components/Header/headerBlock.vue';
+import Advantages from '@/components/Advantages/advantages.vue';
+import Catalog from '@/components/Catalog/catalog.vue';
+import Why from '@/components/Why/why.vue';
+import Manufacture from '@/components/Manufacture/manufacture.vue';
+import Partners from '@/components/Partners/partners.vue';
+import FeedBack from '@/components/FeedBack/feedBack.vue';
+import Map from '@/components/Map/map.vue';
+import Footer from '@/components/Footer/footer.vue';
+import Form from '@/components/Form/form.vue';
+
+export default {
+  components: { 
+      HeaderBlock, Banner, Advantages, Catalog, Why, Manufacture, Partners, FeedBack, Map, Footer, Form
+    },
+    
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+    @import "./style.module.scss";
 </style>
